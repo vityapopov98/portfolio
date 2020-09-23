@@ -6,8 +6,10 @@
           <div class="banner-header">
             <!-- <h1> Hello, my name is Victor.<br> I'm a graphic designer and web develper</h1> -->
             <h1> Привет, меня зовут Виктор.<br> Я дизайнер и веб разработчик</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi dicta aliquid itaque? Exercitationem cupiditate ratione dolorum sit numquam commodi incidunt dolor quia id consequuntur ut, autem eos beatae ab alias?</p>
             <!-- <p>Web development, Graphic Design, UX/UI</p> -->
           </div>
+            <!-- <a href="" class="banner-btn">Contact me</a> -->
           <!-- <img :src="require(`@/assets/banner-portfolio.png`)" alt=""> -->
           <!-- <div class="banner-image"></div> -->
         </div>
@@ -87,7 +89,7 @@
                 <h2>Умный дом</h2>
               </div>
               <div class="work-block-image">
-                <img :src="require(`@/assets/portfolio-coffee.png`)" alt="">
+                <img :src="require(`@/assets/awake.png`)" alt="">
               </div>
             </div>
           </div>
@@ -126,6 +128,12 @@ export default {
         /* background: url('~@/assets/banner-portfolio-dark.png') center bottom no-repeat; */
         background-size: contain;
       }
+      h1{
+        color: #f5f5f7;
+      }
+      .banner-header>p{
+        color: #86868b;
+      }
   }
   @media(prefers-color-scheme: light){
       .banner{
@@ -135,28 +143,62 @@ export default {
         /* background: url('~@/assets/banner-portfolio-light.png') center bottom no-repeat; */
         background-size: contain;
       }
+      h1{
+        color: #1d1d1f;
+      }
+      .banner-header>p{
+        color: #8c8c8c;
+      }
+      .banner-btn{
+        border: 1px solid #8c8c8c;
+        border-radius: 25px;
+        padding: .5rem 1rem;
+        height: 20px;
+      }
   }
+  a.banner-btn{
+        border: 1px solid #8c8c8c;
+        border-radius: 20px;
+        padding: .5rem;
+        color: #8c8c8c;
+        text-decoration: none;
+        justify-content: left;
+      }
   .banner{
     padding: 5rem 0  0 0;
     width: 100%;
-    /* height: 80vh; */
-    height: 50vh  ;
-    font-family: 'Roboto Mono', monospace;
+    height: 80vh;
+    /* height: 50vh  ; */
+    /* font-family: 'Roboto Mono', monospace; */
+    font-family: 'Montserrat';
     /* background: url('~@/assets/luca-micheli-ruWkmt3nU58-unsplash.jpg') center center no-repeat ;
     background-size: cover; */
+    display: flex;
   }
   
   .banner-header{
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    top: 10rem;
+    top: 12rem;
     left: 0;
     right: 0;
     text-align: center;
   }
+  h1{
+    font-size: 54px;
+  }
+  .banner-header>p{
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 24px;
+    padding-top: 2rem;
+    width: 60%;
+    margin: auto;
+    
+  }
   .banner-header h1{
-    width: 80%;
+    width: 70%;
     margin: auto;
   }
   .banner>img{
@@ -212,10 +254,24 @@ export default {
   @media(max-width:640px){
     .banner{
       /* height: 70vh; */
-      height: 50vh;
+      height: 80vh;
+      /* background: none; */
     }
     .banner-header{
       top: 7rem;
+    }
+    .banner-header>h1{
+      width: 80%;
+    }
+    h1{
+      font-size: 34px;
+      text-align: left;
+      font-weight: 500;
+    }
+    .banner-header>p{
+      font-size: 18px;
+      width: 80%;
+      text-align: left;
     }
     .banner-image{
       /* background: url('~@/assets/shotsnapp-1596389440.202.png') center bottom no-repeat; */

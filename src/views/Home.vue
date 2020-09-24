@@ -75,7 +75,9 @@
             <div class="work-block">
               <div class="work-block-header">
                 <p>Дизайн</p>
-                <h2>Леттеринг коллекция</h2>
+                <router-link :to="{name: 'Project', params: {name: 'lettering'}}">
+                    <h2>Леттеринг коллекция</h2>
+                </router-link>
               </div>
               <div class="work-block-image">
                 <img :src="require(`@/assets/portfolio-lettering.png`)" alt="">
@@ -86,7 +88,9 @@
             <div class="work-block">
               <div class="work-block-header">
                 <p>Разработка, Дизайн</p>
-                <h2>Умный дом</h2>
+                <router-link :to="{name: 'Project', params: {name: 'smartHome'}}">
+                    <h2>Умный дом</h2>
+                </router-link>
               </div>
               <div class="work-block-image">
                 <img :src="require(`@/assets/awake.png`)" alt="">
@@ -109,7 +113,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Home',
   props: {
     msg: String
   }

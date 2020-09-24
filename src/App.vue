@@ -13,7 +13,9 @@
             </div>
 
             <div class="links menu-hidden" :class="{'links menu-hidden': !isOpen, 'links menu-open': isOpen}">
-                <a href="">Дизайн</a>
+                <router-link to="/">
+                    Дизайн
+                </router-link>
                 <a href="">Разработка</a>
                 <a href="">Сувениры</a>
                 <a href="">Контакты</a>
@@ -23,23 +25,24 @@
                         <i class="material-icons">
                             close
                             </i>
-                    
+
                 </div>
             </div>
         </nav>
 
 
-    <HelloWorld msg="Welcome to Your Vue.js App" v-show="!isOpen" />
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App" v-show="!isOpen" /> -->
+      <router-view/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // HelloWorld
   },
   data(){
     return {

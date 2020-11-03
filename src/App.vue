@@ -159,6 +159,18 @@ html, body{
     text-align: center;
     flex-grow: 3;
 }
+/* Links on cards */
+a{
+    color: white;
+    text-decoration: none;
+    margin: 0%;
+    padding-top: 0%;
+}
+a>h2{
+    margin: 8px 0;
+}
+
+/* end links on cards */
 .search{
     display: flex;
     justify-content: flex-end;

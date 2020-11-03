@@ -5,8 +5,12 @@
         <div class="banner">
           <div class="banner-header">
             <!-- <h1> Hello, my name is Victor.<br> I'm a graphic designer and web develper</h1> -->
-            <h1> Привет, меня зовут Виктор.<br> Я дизайнер и веб разработчик</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi dicta aliquid itaque? Exercitationem cupiditate ratione dolorum sit numquam commodi incidunt dolor quia id consequuntur ut, autem eos beatae ab alias?</p>
+            <!-- <img :src="require(`@/assets/me.png`)" class="banner-avatar" alt=""> -->
+            <div class="banner-avatar"></div>
+            <!-- <span class="banner-logo">👨🏼‍💻 </span> -->
+            <h1>Привет, меня зовут Виктор.<br> <span class="desktop-header">Я дизайнер и веб разработчик</span></h1>
+            <p>Могу сделать вам сайт, создать логотип и фирменный дизайн. Nisi dicta aliquid itaque? Exercitationem cupiditate ratione dolorum sit numquam commodi.</p>
+            <!-- <a href="https://api.instagram.com/direct/t/340282366841710300949128137420883657077">Заказать</a> -->
             <!-- <p>Web development, Graphic Design, UX/UI</p> -->
           </div>
             <!-- <a href="" class="banner-btn">Contact me</a> -->
@@ -14,19 +18,14 @@
           <!-- <div class="banner-image"></div> -->
         </div>
       </div>
-      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde magnam minus iusto inventore, qui voluptatem, natus suscipit ullam fugiat corrupti vitae et dicta. Provident adipisci atque illum voluptatum debitis cumque?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde magnam minus iusto inventore, qui voluptatem, natus suscipit ullam fugiat corrupti vitae et dicta. Provident adipisci atque illum voluptatum debitis cumque?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde magnam minus iusto inventore, qui voluptatem, natus suscipit ullam fugiat corrupti vitae et dicta. Provident adipisci atque illum voluptatum debitis cumque?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde magnam minus iusto inventore, qui voluptatem, natus suscipit ullam fugiat corrupti vitae et dicta. Provident adipisci atque illum voluptatum debitis cumque?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde magnam minus iusto inventore, qui voluptatem, natus suscipit ullam fugiat corrupti vitae et dicta. Provident adipisci atque illum voluptatum debitis cumque?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde magnam minus iusto inventore, qui voluptatem, natus suscipit ullam fugiat corrupti vitae et dicta. Provident adipisci atque illum voluptatum debitis cumque?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde magnam minus iusto inventore, qui voluptatem, natus suscipit ullam fugiat corrupti vitae et dicta. Provident adipisci atque illum voluptatum debitis cumque?</p> -->
         <div class="row" >
           <div class="column-3">
             <div class="work-block">
               <div class="work-block-header">
                 <p>Разработка, Дизайн</p>
-                <h2>Coffee in hobby</h2>
+                <router-link :to="{name: 'Project', params: {name: 'coffeeInHobby'}}">
+                    <h2>Coffee in hobby</h2>
+                </router-link>
               </div>
               <div class="work-block-image">
                 <img :src="require(`@/assets/portfolio-coffee.png`)" alt="">
@@ -38,7 +37,9 @@
             <div class="work-block">
               <div class="work-block-header">
                 <p>Разработка</p>
-                <h2>Концепт сайта</h2>
+                <router-link :to="{name: 'Project', params: {name: 'sanchez'}}">
+                    <h2>Концепт сайта</h2>
+                </router-link>
               </div>
               <div class="work-block-image">
                 <img :src="require(`@/assets/portfolio-sanchez.png`)" alt="">
@@ -49,7 +50,9 @@
             <div class="work-block">
               <div class="work-block-header">
                 <p>Разработка, Дизайн</p>
-                <h2>Умный дом</h2>
+                <router-link :to="{name: 'Project', params: {name: 'smartHome'}}">
+                    <h2>Умный дом</h2>
+                </router-link>
               </div>
               <div class="work-block-image">
                 <img :src="require(`@/assets/portfolio-greenzone.png`)" alt="">
@@ -63,11 +66,12 @@
             <div class="work-block">
               <div class="work-block-header">
                 <p>Разработка, Дизайн</p>
-                <h2>Приложение для мероприятий</h2>
+                <router-link :to="{name: 'Project', params: {name: 'eventsApp'}}">
+                  <h2>Приложение для мероприятий</h2>
+                </router-link>
               </div>
               <div class="work-block-image">
                 <img :src="require(`@/assets/portfolio-events.png`)" alt="">
-                <!-- <img :src="require(`@/assets/portfolio-events.png`)" alt=""> -->
               </div>
             </div>
           </div>
@@ -88,7 +92,7 @@
             <div class="work-block">
               <div class="work-block-header">
                 <p>Разработка, Дизайн</p>
-                <router-link :to="{name: 'Project', params: {name: 'smartHome'}}">
+                <router-link :to="{name: 'Project', params: {name: 'cnc'}}">
                     <h2>Умный дом</h2>
                 </router-link>
               </div>
@@ -104,7 +108,16 @@
     <footer>
       <div class="container">
         <div class="row">
-          CodeDesign 2020 &copy; All rights reserved
+          <div class="col-md-6">CodeDesign 2020 &copy; All rights reserved</div>
+          <div class="col-md-6">
+            <div class="footer-links-block">
+              <a href="https://www.instagram.com/mbm_and_pline/" class="footer-link">Instagram</a>
+              <a href="https://vk.com/vitrekp" class="footer-link">Vk</a>
+              <a href="https://www.behance.net/vityapopovdd27" class="footer-link">Behance</a>
+              <a href="https://github.com/vityapopov98" class="footer-link">GitHub</a>
+              <a href="https://www.artstation.com/victor_popov" class="footer-link">ArtStation</a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
@@ -138,6 +151,21 @@ export default {
       .banner-header>p{
         color: #86868b;
       }
+      .banner-avatar{
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        padding: 0%;
+        background: url('~@/assets/me-black.png') center bottom no-repeat;
+        background-size: contain;
+      }
+      .footer-link{
+        color: #4d4d4d;
+        margin: 0 1rem;
+      }
+      .footer-link:hover{
+        color: #6d6d6d;
+      }
   }
   @media(prefers-color-scheme: light){
       .banner{
@@ -159,7 +187,26 @@ export default {
         padding: .5rem 1rem;
         height: 20px;
       }
+      .banner-avatar{
+        background: url('~@/assets/me.png') center bottom no-repeat;
+        background-size: contain;
+      }
+      .footer-link{
+        color: #9c9c9c;
+        margin: 0 1rem;
+      }
+      .footer-link:hover{
+        color: #bebebe;
+      }
   }
+
+  .banner-avatar{
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        padding: 0%;
+        
+      }
   a.banner-btn{
         border: 1px solid #8c8c8c;
         border-radius: 20px;
@@ -179,12 +226,16 @@ export default {
     background-size: cover; */
     display: flex;
   }
-  
+  .banner-logo{
+      width: 90%;
+      margin: auto;
+      font-size: 150px;
+  }
   .banner-header{
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    top: 15rem;
+    top: 7rem;
     left: 0;
     right: 0;
     text-align: center;
@@ -255,6 +306,19 @@ export default {
   height: 100%;
 }
 
+footer{
+  padding: 3rem 0;
+  color: #4d4d4d;
+}
+.col-md-6{
+  width: 50%;
+  box-sizing: border-box;
+}
+.footer-links-block{
+  text-align: right;
+  width: 100%; 
+}
+
   @media(max-width:640px){
     .banner{
       /* height: 70vh; */
@@ -268,14 +332,17 @@ export default {
       width: 80%;
     }
     h1{
-      font-size: 34px;
-      text-align: left;
+      font-size: 32px;
+      /* text-align: left; */
       font-weight: 500;
     }
+    .desktop-header{
+        display: none;
+    }
     .banner-header>p{
-      font-size: 18px;
+      font-size: 17px;
       width: 80%;
-      text-align: left;
+      /* text-align: left; */
     }
     .banner-image{
       /* background: url('~@/assets/shotsnapp-1596389440.202.png') center bottom no-repeat; */

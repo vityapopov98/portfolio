@@ -19,7 +19,6 @@
                 <a href="">Разработка</a>
                 <a href="">Сувениры</a>
                 <a href="">Контакты</a>
-                <a href="#signin"  class="signin">Вход</a>
                 <div class="hide-menu-btn" @click="closeMenu()">
                    
                         <i class="material-icons">
@@ -65,6 +64,7 @@ html, body{
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', 'sans-serif';
+    overflow-x: hidden;
 }
 
 @media(prefers-color-scheme: dark){
@@ -97,31 +97,6 @@ html, body{
 .material-icons{
     font-size: 1.7rem;
 }
-/* .column-left{
-    width: 50%;
-}
-.column-right{
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
-}
-.column-left a, .column-right a{
-    font-family: 'Roboto Condensed', sans-serif;
-    color: #949494;
-    text-decoration: none; 
-}
-.column-left a{
-    border-right: 1px solid #cdcdcd;
-    padding: 1rem;
-    font-weight: 200;
-    font-size: .9rem;
-}
-.column-right a{
-    font-weight: 200;
-    font-size: .9rem;
-    padding-left: 1rem;
-    
-} */
 /* главный навбар */
 
 

@@ -104,4 +104,9 @@ p{
     height: 100%;
     object-fit: cover;
 }
+@media(max-width:640px){
+    .container-p{
+        width: 80%;
+    }
+}
 </style>

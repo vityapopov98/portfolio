@@ -9,7 +9,7 @@
             <div class="banner-avatar"></div>
             <!-- <span class="banner-logo">👨🏼‍💻 </span> -->
             <h1>Привет, меня зовут Виктор.<br> <span class="desktop-header">Я дизайнер и веб разработчик</span></h1>
-            <p>Могу сделать вам сайт, создать логотип и фирменный дизайн. Nisi dicta aliquid itaque? Exercitationem cupiditate ratione dolorum sit numquam commodi.</p>
+            <p>Могу сделать вам сайт, создать логотип и фирменный дизайн. Открыт для связи в социальных сетях и по почте. <br>А пока, можете посмотреть на мои работы.</p>
             <!-- <a href="https://api.instagram.com/direct/t/340282366841710300949128137420883657077">Заказать</a> -->
             <!-- <p>Web development, Graphic Design, UX/UI</p> -->
           </div>
@@ -108,7 +108,7 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-md-6">CodeDesign 2020 &copy; All rights reserved</div>
+          <div class="col-md-6 copyright">CodeDesign 2020 &copy; All rights reserved</div>
           <div class="col-md-6">
             <div class="footer-links-block">
               <a href="https://www.instagram.com/mbm_and_pline/" class="footer-link">Instagram</a>
@@ -116,6 +116,7 @@
               <a href="https://www.behance.net/vityapopovdd27" class="footer-link">Behance</a>
               <a href="https://github.com/vityapopov98" class="footer-link">GitHub</a>
               <a href="https://www.artstation.com/victor_popov" class="footer-link">ArtStation</a>
+              <a href="mailto:vityapopov98@yandex.ru" class="footer-link">Почта</a>
             </div>
           </div>
         </div>
@@ -200,12 +201,12 @@ export default {
       }
   }
 
+/* --------- Баннер ------- */
   .banner-avatar{
         width: 200px;
         height: 200px;
         margin: auto;
         padding: 0%;
-        
       }
   a.banner-btn{
         border: 1px solid #8c8c8c;
@@ -240,8 +241,10 @@ export default {
     right: 0;
     text-align: center;
   }
-  h1{
+  .banner-header h1{
     font-size: 54px;
+    width: 70%;
+    margin: auto;
   }
   .banner-header>p{
     font-family: 'Montserrat';
@@ -251,10 +254,6 @@ export default {
     width: 60%;
     margin: auto;
     
-  }
-  .banner-header h1{
-    width: 70%;
-    margin: auto;
   }
   .banner>img{
     object-fit: cover;
@@ -269,6 +268,8 @@ export default {
     background: url('~@/assets/banner-portfolio-light.png') center bottom no-repeat;
     background-size: contain; */
   }
+
+/* ----- Конец Банера ------- */
 
 /* Work block */
 
@@ -311,6 +312,7 @@ footer{
   color: #4d4d4d;
 }
 .col-md-6{
+  
   width: 50%;
   box-sizing: border-box;
 }
@@ -318,7 +320,52 @@ footer{
   text-align: right;
   width: 100%; 
 }
+.copyright{
+  display: block;
+}
 
+@media(max-width:1200px){
+  .banner-header h1{
+    font-size: 42px;
+  }
+  .banner-header p{
+    font-size: 20px;
+  }
+}
+@media(max-width:920px){
+  .banner-header h1{
+    font-size: 38px;
+  }
+  .banner-header p{
+    font-size: 17px;
+  }
+}
+/* iPhone SE 1 */
+@media(max-width:320px){
+    .banner-avatar{
+        width: 150px;
+        height: 150px;
+        margin: auto;
+        padding: 0%;
+      }
+  .banner-header h1{
+    font-size: 30px;
+  }
+  .banner-header p{
+    font-size: 14px;
+  }
+}
+/* iPad pro */
+@media(min-height:1366px){ 
+  .banner{
+    height: 40vh;
+  }
+}
+@media(min-height:1040px){ 
+  .banner{
+    height: 60vh;
+  }
+}
   @media(max-width:640px){
     .banner{
       /* height: 70vh; */
@@ -359,6 +406,19 @@ footer{
     .column-3:last-child{
       margin-bottom: 0;
     }
+
+    .footer-links-block{
+      text-align: center;
+      line-height: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    
+    .col-md-6{
+      width: 100%;
+    }
+    .copyright{display: none;}
   }
 
 </style>

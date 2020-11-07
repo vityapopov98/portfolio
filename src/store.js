@@ -20,7 +20,7 @@ export default  {
             headerImg: 'portfolio-sanchez.png',
             name: 'Концепт сайта',
             description: 'Для композитора Александра Запорожцева. Sanchez',
-            text: ['Интересный дизайн сайта придумал мой друг Илья Смирнов. И я решил сверстать эту страницу.', 'pic:sanchez-muckup.jpg', 'Данный landing page конечно же поддереживает адаптивный вид для планшетов и смартфонов', 'pic:bg.jpg', 'Вы можете посетить эту страницу, посмотреть и послушать музыку.', 'Sanchez Landing Page l:https://maxikon.ru/sanchez/index.html']
+            text: ['Интересный дизайн сайта придумал мой друг Илья Смирнов. И я решил сверстать эту страницу.', 'pic:sanchez-muckup.jpg', 'Данный landing page конечно же поддереживает адаптивный вид для планшетов и смартфонов. Сделан с помощью HTML, CSS, JavaScript, Bootstrap', 'pic:sanchez-code.png', 'Вы можете посетить эту страницу, посмотреть и послушать музыку.', 'Sanchez Landing Page l:https://maxikon.ru/sanchez/index.html']
         },
         {
             urlName: 'lettering',

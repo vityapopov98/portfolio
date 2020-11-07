@@ -31,16 +31,18 @@
                 
         </div>
         
+        <Footer></Footer>
     </div>
     
 </template>
 
 <script>
+import Footer from '../components/Footer'
 
 export default {
   name: 'Project',
   components: {
-      
+      Footer
   },
   data: function(){
       return {

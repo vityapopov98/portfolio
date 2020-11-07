@@ -105,7 +105,7 @@
 
     </div>
 
-    <footer>
+    <!-- <footer>
       <div class="container">
         <div class="row">
           <div class="col-md-6 copyright">CodeDesign 2020 &copy; All rights reserved</div>
@@ -121,13 +121,19 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
+    <Footer/>
   </div>
 </template>
 
 <script>
+import Footer from '../components/Footer'
+
 export default {
   name: 'Home',
+  components:{
+    Footer
+  },
   props: {
     msg: String
   }

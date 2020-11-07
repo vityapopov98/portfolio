@@ -18,6 +18,12 @@
                     <!-- <h2>{{projectName}}</h2> -->
                     <img v-if="element.includes('pic:')" :src="require(`@/assets/${element.slice(4)}`)" alt="" class="project-img">
                     <h2 v-else-if="element.includes('h:')">{{element.slice(2)}}</h2>
+                    <div class="project-link" v-else-if="element.includes('l:')">
+                        <span class="material-icons">
+                            link
+                        </span>
+                        <a :href="getLink(element)" >{{getLinkName(element)}}</a>
+                    </div>
                     <p v-else >{{element}}</p>
                     <!-- <p>{{description}}</p> -->
                 </div>
@@ -44,7 +50,8 @@ export default {
             headerImg: '',
             name: 'Coffee in Hobby',
             description: '',
-            projectDetails: {}
+            projectDetails: {},
+            linkName: ''
       }
   },
   methods:{
@@ -60,6 +67,16 @@ export default {
                 console.log('reer?',this.projectImage)
             }
         });
+    },
+    getLink(data){
+        if(data.includes('l:')){
+            var columnPosition = data.indexOf(':');
+            return data.slice(columnPosition+1)
+        }
+    },
+    getLinkName(data){
+        var columnPosition = data.indexOf(':');
+        return data.slice(0, columnPosition-1);
     }
     
   },
@@ -103,6 +120,24 @@ p{
     margin: auto;
     height: 100%;
     object-fit: cover;
+}
+.project-link{
+    display: flex;
+    align-items: center;
+}
+
+.project-link>a:hover{
+    text-decoration: underline !important;
+    color: #b1b1b1;
+}
+@media(prefers-color-scheme: light){
+    .project-link>a{
+        color: #111111;
+    }
+    .project-link>a:hover{
+    text-decoration: underline !important;
+    color: #202020;
+}
 }
 @media(max-width:640px){
     .container-p{

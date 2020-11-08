@@ -18,7 +18,25 @@
           <!-- <div class="banner-image"></div> -->
         </div>
       </div>
-        <div class="row" >
+
+      <div class="row" v-for="(projects, index) in projectsDoubleArray" :key="index">
+        <div class="column-3" v-for="(project, index) in projects" :key="index">
+          <div class="work-block">
+            <div class="work-block-header">
+              <p>{{project.category}}</p>
+              <router-link :to="{name: 'Project', params: {name: project.urlName}}">
+                <h2>{{project.name}}</h2>
+              </router-link>
+            </div>
+            <div class="work-block-image">
+                <img :src="require(`@/assets/${project.headerImg}`)" alt="">
+              </div>
+          </div>
+        </div>
+
+      </div>
+
+        <!-- <div class="row" >
           <div class="column-3">
             <div class="work-block">
               <div class="work-block-header">
@@ -29,7 +47,6 @@
               </div>
               <div class="work-block-image">
                 <img :src="require(`@/assets/portfolio-coffee.png`)" alt="">
-                <!-- <img :src="require(`@/assets/portfolio-events.png`)" alt=""> -->
               </div>
             </div>
           </div>
@@ -59,9 +76,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
-        <div class="row" >
+        <!-- <div class="row" >
           <div class="column-3">
             <div class="work-block">
               <div class="work-block-header">
@@ -101,7 +118,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
     </div>
 
@@ -136,6 +153,31 @@ export default {
   },
   props: {
     msg: String
+  },
+  data: function(){
+    return {
+      projectsDoubleArray: []
+    }
+  },
+  methods:{
+    loadProjects(){
+      // this.projects = this.$root.projects;
+      var tempArr = [];
+
+      this.$root.projects.forEach(element => {
+        console.log(tempArr)
+        tempArr.push(element)
+        if(tempArr.length == 3){
+          this.projectsDoubleArray.push(tempArr)
+          tempArr = []
+          // tempArr.splice(0, tempArr.length)
+        }
+      });
+    }
+  },
+  mounted(){
+    this.loadProjects()
+    console.log('he', this.projectsDoubleArray)
   }
 }
 </script>

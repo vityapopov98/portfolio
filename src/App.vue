@@ -13,7 +13,10 @@
             </div>
 
             <div class="links menu-hidden" :class="{'links menu-hidden': !isOpen, 'links menu-open': isOpen}">
-                <router-link to="/">
+                <!-- <router-link to="/" v-on:click.native="closeMenu()">
+                    Главная
+                </router-link> -->
+                <router-link to="/" v-on:click.native="closeMenu()">
                     Дизайн
                 </router-link>
                 <a href="">Разработка</a>
@@ -55,6 +58,12 @@ export default {
    closeMenu(){
        this.isOpen = false
    }
+  },
+  mounted(){
+      this.isOpen = false
+  },
+  beforeRouteLeave(){
+      alert('here')
   }
 }
 </script>

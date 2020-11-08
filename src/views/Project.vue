@@ -9,7 +9,8 @@
             </div>
         </div>
         <div class="project-banner">
-            <img :src="require(`@/assets/${projectImage}`)" alt="" class="project-banner-img">
+            <!-- <img :src="require(`@/assets/${projectDetails.headerImg}`)" alt="" class="project-banner-img"> -->
+            <img :src="headerImage" alt="" class="project-banner-img">
         </div>
         <div class="container-p">
             
@@ -47,7 +48,7 @@ export default {
   data: function(){
       return {
           projectName: this.$route.params.name,
-          projectImage: '',
+          projectImage: {},
 
             headerImg: '',
             name: 'Coffee in Hobby',
@@ -81,6 +82,16 @@ export default {
         return data.slice(0, columnPosition-1);
     }
     
+  },
+  computed:{
+      headerImage(){
+          console.log(this.projectDetails.headerImg)
+          if(this.projectDetails.headerImg != undefined){
+              return require(`@/assets/${this.projectDetails.headerImg}`)
+          }
+          return '' // Почему-то в начале при переходе на страницу vue ругается на header image типо оно undefined, но вообще все работает
+          // написав этот костыль он перестал ругаться
+      }
   },
   mounted(){
      this.loadProject()

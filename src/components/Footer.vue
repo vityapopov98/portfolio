@@ -41,10 +41,24 @@ footer{
   display: block;
 }
 .footer-link{
-        color: #4d4d4d;
-        margin: 0 1rem;
-      }
-      .footer-link:hover{
-        color: #6d6d6d;
-      }
+    color: #4d4d4d;
+    margin: 0 1rem;
+}
+.footer-link:hover{
+    color: #6d6d6d;
+}
+@media(max-width: 640px){
+        .footer-links-block{
+      text-align: center;
+      line-height: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    
+    .col-md-6{
+      width: 100%;
+    }
+    .copyright{display: none;}
+}
 </style>
